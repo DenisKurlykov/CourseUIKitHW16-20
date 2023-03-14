@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		7D3F3FEF29BF657000AE0079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F3FEE29BF657000AE0079 /* AppDelegate.swift */; };
 		7D3F3FF129BF657000AE0079 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F3FF029BF657000AE0079 /* SceneDelegate.swift */; };
-		7D3F3FF329BF657000AE0079 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F3FF229BF657000AE0079 /* ViewController.swift */; };
+		7D3F3FF329BF657000AE0079 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F3FF229BF657000AE0079 /* TabBarController.swift */; };
 		7D3F3FF629BF657000AE0079 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F3FF429BF657000AE0079 /* Main.storyboard */; };
 		7D3F3FF829BF657100AE0079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F3FF729BF657100AE0079 /* Assets.xcassets */; };
 		7D3F3FFB29BF657100AE0079 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F3FF929BF657100AE0079 /* LaunchScreen.storyboard */; };
+		7D3F401529BFA01200AE0079 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F401429BFA01200AE0079 /* BuyViewController.swift */; };
+		7D3F401829BFA05800AE0079 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F401729BFA05800AE0079 /* ForYouViewController.swift */; };
+		7D3F401B29BFA0BE00AE0079 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F401A29BFA0BE00AE0079 /* SearchViewController.swift */; };
+		7D3F401E29BFA11B00AE0079 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F401D29BFA11B00AE0079 /* ShoppingCartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7D3F3FEB29BF657000AE0079 /* CourseUIKitHW16-20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CourseUIKitHW16-20.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3F3FEE29BF657000AE0079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D3F3FF029BF657000AE0079 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7D3F3FF229BF657000AE0079 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7D3F3FF229BF657000AE0079 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		7D3F3FF529BF657000AE0079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D3F3FF729BF657100AE0079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D3F3FFA29BF657100AE0079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D3F3FFC29BF657100AE0079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D3F401429BFA01200AE0079 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		7D3F401729BFA05800AE0079 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
+		7D3F401A29BFA0BE00AE0079 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		7D3F401D29BFA11B00AE0079 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,91 @@
 		7D3F3FED29BF657000AE0079 /* CourseUIKitHW16-20 */ = {
 			isa = PBXGroup;
 			children = (
-				7D3F3FEE29BF657000AE0079 /* AppDelegate.swift */,
-				7D3F3FF029BF657000AE0079 /* SceneDelegate.swift */,
-				7D3F3FF229BF657000AE0079 /* ViewController.swift */,
-				7D3F3FF429BF657000AE0079 /* Main.storyboard */,
-				7D3F3FF729BF657100AE0079 /* Assets.xcassets */,
-				7D3F3FF929BF657100AE0079 /* LaunchScreen.storyboard */,
-				7D3F3FFC29BF657100AE0079 /* Info.plist */,
+				7D3F400D29BF9E7600AE0079 /* App */,
+				7D3F400E29BF9EA900AE0079 /* Storyboards */,
+				7D3F401029BF9EF300AE0079 /* Resources */,
+				7D3F400F29BF9EC000AE0079 /* ViewControllers */,
 			);
 			path = "CourseUIKitHW16-20";
+			sourceTree = "<group>";
+		};
+		7D3F400D29BF9E7600AE0079 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7D3F3FEE29BF657000AE0079 /* AppDelegate.swift */,
+				7D3F3FF029BF657000AE0079 /* SceneDelegate.swift */,
+				7D3F3FFC29BF657100AE0079 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7D3F400E29BF9EA900AE0079 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7D3F3FF429BF657000AE0079 /* Main.storyboard */,
+				7D3F3FF929BF657100AE0079 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7D3F400F29BF9EC000AE0079 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7D3F401229BF9F3100AE0079 /* TabBarController */,
+				7D3F401329BF9FEF00AE0079 /* BuyVC */,
+				7D3F401629BFA03200AE0079 /* ForYouVC */,
+				7D3F401929BFA09400AE0079 /* SearchVC */,
+				7D3F401C29BFA0F800AE0079 /* ShoppingCartVC */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7D3F401029BF9EF300AE0079 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7D3F3FF729BF657100AE0079 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7D3F401229BF9F3100AE0079 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				7D3F3FF229BF657000AE0079 /* TabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		7D3F401329BF9FEF00AE0079 /* BuyVC */ = {
+			isa = PBXGroup;
+			children = (
+				7D3F401429BFA01200AE0079 /* BuyViewController.swift */,
+			);
+			path = BuyVC;
+			sourceTree = "<group>";
+		};
+		7D3F401629BFA03200AE0079 /* ForYouVC */ = {
+			isa = PBXGroup;
+			children = (
+				7D3F401729BFA05800AE0079 /* ForYouViewController.swift */,
+			);
+			path = ForYouVC;
+			sourceTree = "<group>";
+		};
+		7D3F401929BFA09400AE0079 /* SearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				7D3F401A29BFA0BE00AE0079 /* SearchViewController.swift */,
+			);
+			path = SearchVC;
+			sourceTree = "<group>";
+		};
+		7D3F401C29BFA0F800AE0079 /* ShoppingCartVC */ = {
+			isa = PBXGroup;
+			children = (
+				7D3F401D29BFA11B00AE0079 /* ShoppingCartViewController.swift */,
+			);
+			path = ShoppingCartVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +222,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D3F3FF329BF657000AE0079 /* ViewController.swift in Sources */,
+				7D3F401B29BFA0BE00AE0079 /* SearchViewController.swift in Sources */,
+				7D3F3FF329BF657000AE0079 /* TabBarController.swift in Sources */,
+				7D3F401529BFA01200AE0079 /* BuyViewController.swift in Sources */,
 				7D3F3FEF29BF657000AE0079 /* AppDelegate.swift in Sources */,
+				7D3F401829BFA05800AE0079 /* ForYouViewController.swift in Sources */,
 				7D3F3FF129BF657000AE0079 /* SceneDelegate.swift in Sources */,
+				7D3F401E29BFA11B00AE0079 /* ShoppingCartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +377,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 722725XTB3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CourseUIKitHW16-20/Info.plist";
+				INFOPLIST_FILE = "CourseUIKitHW16-20/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +405,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 722725XTB3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CourseUIKitHW16-20/Info.plist";
+				INFOPLIST_FILE = "CourseUIKitHW16-20/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

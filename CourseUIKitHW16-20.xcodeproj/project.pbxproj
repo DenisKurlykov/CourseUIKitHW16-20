@@ -11,12 +11,14 @@
 		7D3F3FF129BF657000AE0079 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F3FF029BF657000AE0079 /* SceneDelegate.swift */; };
 		7D3F3FF329BF657000AE0079 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F3FF229BF657000AE0079 /* TabBarController.swift */; };
 		7D3F3FF629BF657000AE0079 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F3FF429BF657000AE0079 /* Main.storyboard */; };
-		7D3F3FF829BF657100AE0079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F3FF729BF657100AE0079 /* Assets.xcassets */; };
 		7D3F3FFB29BF657100AE0079 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F3FF929BF657100AE0079 /* LaunchScreen.storyboard */; };
 		7D3F401529BFA01200AE0079 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F401429BFA01200AE0079 /* BuyViewController.swift */; };
 		7D3F401829BFA05800AE0079 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F401729BFA05800AE0079 /* ForYouViewController.swift */; };
 		7D3F401B29BFA0BE00AE0079 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F401A29BFA0BE00AE0079 /* SearchViewController.swift */; };
 		7D3F401E29BFA11B00AE0079 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F401D29BFA11B00AE0079 /* ShoppingCartViewController.swift */; };
+		7D3F404529C2301000AE0079 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F404429C2301000AE0079 /* ProductCard.swift */; };
+		7D3F404729C2365A00AE0079 /* SearchViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F404629C2365A00AE0079 /* SearchViewController+extension.swift */; };
+		7D3F404929C269E600AE0079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F404829C269E600AE0079 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,13 +27,15 @@
 		7D3F3FF029BF657000AE0079 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7D3F3FF229BF657000AE0079 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		7D3F3FF529BF657000AE0079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7D3F3FF729BF657100AE0079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D3F3FFA29BF657100AE0079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D3F3FFC29BF657100AE0079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D3F401429BFA01200AE0079 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		7D3F401729BFA05800AE0079 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
 		7D3F401A29BFA0BE00AE0079 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7D3F401D29BFA11B00AE0079 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
+		7D3F404429C2301000AE0079 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
+		7D3F404629C2365A00AE0079 /* SearchViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+extension.swift"; sourceTree = "<group>"; };
+		7D3F404829C269E600AE0079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +110,7 @@
 		7D3F401029BF9EF300AE0079 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7D3F3FF729BF657100AE0079 /* Assets.xcassets */,
+				7D3F404829C269E600AE0079 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -138,6 +142,8 @@
 		7D3F401929BFA09400AE0079 /* SearchVC */ = {
 			isa = PBXGroup;
 			children = (
+				7D3F404629C2365A00AE0079 /* SearchViewController+extension.swift */,
+				7D3F404429C2301000AE0079 /* ProductCard.swift */,
 				7D3F401A29BFA0BE00AE0079 /* SearchViewController.swift */,
 			);
 			path = SearchVC;
@@ -210,7 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D3F3FFB29BF657100AE0079 /* LaunchScreen.storyboard in Resources */,
-				7D3F3FF829BF657100AE0079 /* Assets.xcassets in Resources */,
+				7D3F404929C269E600AE0079 /* Assets.xcassets in Resources */,
 				7D3F3FF629BF657000AE0079 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,8 +231,10 @@
 				7D3F401B29BFA0BE00AE0079 /* SearchViewController.swift in Sources */,
 				7D3F3FF329BF657000AE0079 /* TabBarController.swift in Sources */,
 				7D3F401529BFA01200AE0079 /* BuyViewController.swift in Sources */,
+				7D3F404729C2365A00AE0079 /* SearchViewController+extension.swift in Sources */,
 				7D3F3FEF29BF657000AE0079 /* AppDelegate.swift in Sources */,
 				7D3F401829BFA05800AE0079 /* ForYouViewController.swift in Sources */,
+				7D3F404529C2301000AE0079 /* ProductCard.swift in Sources */,
 				7D3F3FF129BF657000AE0079 /* SceneDelegate.swift in Sources */,
 				7D3F401E29BFA11B00AE0079 /* ShoppingCartViewController.swift in Sources */,
 			);

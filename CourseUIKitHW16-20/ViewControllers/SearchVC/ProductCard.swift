@@ -33,7 +33,6 @@ final class ProductCard: UIView {
         
     }
     
-
     required init?(coder: NSCoder) {
         super .init(coder: coder)
     }

@@ -17,8 +17,9 @@
 		7D3F401B29BFA0BE00AE0079 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F401A29BFA0BE00AE0079 /* SearchViewController.swift */; };
 		7D3F401E29BFA11B00AE0079 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F401D29BFA11B00AE0079 /* ShoppingCartViewController.swift */; };
 		7D3F404529C2301000AE0079 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F404429C2301000AE0079 /* ProductCard.swift */; };
-		7D3F404729C2365A00AE0079 /* SearchViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F404629C2365A00AE0079 /* SearchViewController+extension.swift */; };
+		7D3F404729C2365A00AE0079 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F404629C2365A00AE0079 /* UIViewController+extension.swift */; };
 		7D3F404929C269E600AE0079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F404829C269E600AE0079 /* Assets.xcassets */; };
+		7D3F404B29C6147900AE0079 /* UIView+extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F404A29C6147900AE0079 /* UIView+extenstion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +35,9 @@
 		7D3F401A29BFA0BE00AE0079 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7D3F401D29BFA11B00AE0079 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		7D3F404429C2301000AE0079 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
-		7D3F404629C2365A00AE0079 /* SearchViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+extension.swift"; sourceTree = "<group>"; };
+		7D3F404629C2365A00AE0079 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		7D3F404829C269E600AE0079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
+		7D3F404A29C6147900AE0079 /* UIView+extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extenstion.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,8 @@
 		7D3F400F29BF9EC000AE0079 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7D3F404A29C6147900AE0079 /* UIView+extenstion.swift */,
+				7D3F404629C2365A00AE0079 /* UIViewController+extension.swift */,
 				7D3F401229BF9F3100AE0079 /* TabBarController */,
 				7D3F401329BF9FEF00AE0079 /* BuyVC */,
 				7D3F401629BFA03200AE0079 /* ForYouVC */,
@@ -142,7 +146,6 @@
 		7D3F401929BFA09400AE0079 /* SearchVC */ = {
 			isa = PBXGroup;
 			children = (
-				7D3F404629C2365A00AE0079 /* SearchViewController+extension.swift */,
 				7D3F404429C2301000AE0079 /* ProductCard.swift */,
 				7D3F401A29BFA0BE00AE0079 /* SearchViewController.swift */,
 			);
@@ -231,12 +234,13 @@
 				7D3F401B29BFA0BE00AE0079 /* SearchViewController.swift in Sources */,
 				7D3F3FF329BF657000AE0079 /* TabBarController.swift in Sources */,
 				7D3F401529BFA01200AE0079 /* BuyViewController.swift in Sources */,
-				7D3F404729C2365A00AE0079 /* SearchViewController+extension.swift in Sources */,
+				7D3F404729C2365A00AE0079 /* UIViewController+extension.swift in Sources */,
 				7D3F3FEF29BF657000AE0079 /* AppDelegate.swift in Sources */,
 				7D3F401829BFA05800AE0079 /* ForYouViewController.swift in Sources */,
 				7D3F404529C2301000AE0079 /* ProductCard.swift in Sources */,
 				7D3F3FF129BF657000AE0079 /* SceneDelegate.swift in Sources */,
 				7D3F401E29BFA11B00AE0079 /* ShoppingCartViewController.swift in Sources */,
+				7D3F404B29C6147900AE0079 /* UIView+extenstion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

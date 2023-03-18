@@ -6,8 +6,8 @@
 //
 
 import UIKit
-
-class ProductCard: UIView {
+ 
+final class ProductCard: UIView {
     
     // MARK: - Private Properties
     
@@ -29,30 +29,30 @@ class ProductCard: UIView {
     
     init(textLabel: String, textSize: CGFloat, imageName: String) {
         super .init(frame: .zero)
-        label.text = textLabel
-        label.font = .systemFont(ofSize: textSize)
-        
-        imageView.image = UIImage(named: imageName)
-        
-        backgroundColor = UIColor(red: 32/255, green: 28/255, blue: 34/255, alpha: 1)
-        layer.cornerRadius = 20
-        setupUI()
+        setupUI(textLabel: textLabel, textSize: textSize, imageName: imageName)
         
     }
     
 
     required init?(coder: NSCoder) {
         super .init(coder: coder)
-        setupUI()
     }
     
     // MARK: - Private Methods
     
-    private func setupUI() {
-        addSubview(
+    private func setupUI(textLabel: String, textSize: CGFloat, imageName: String) {
+        backgroundColor = UIColor(red: 32/255, green: 28/255, blue: 34/255, alpha: 1)
+        layer.cornerRadius = 20
+        
+        label.text = textLabel
+        label.font = .systemFont(ofSize: textSize)
+        imageView.image = UIImage(named: imageName)
+        
+        addSubviewsUIView(
             imageView,
             label
         )
+        
         setupConstraints()
     }
     
@@ -73,11 +73,5 @@ class ProductCard: UIView {
             label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
             label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
         ])
-    }
-    
-    private func addSubview(_ subviews: UIView...) {
-        subviews.forEach { subview in
-            addSubview(subview)
-        }
     }
 }

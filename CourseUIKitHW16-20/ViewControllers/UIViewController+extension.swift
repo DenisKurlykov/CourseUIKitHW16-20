@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension SearchViewController {
+extension UIViewController {
     func addSubviews(_ subviews: UIView...) {
         subviews.forEach { subview in
             view.addSubview(subview)

@@ -9,35 +9,29 @@ import UIKit
 
 final class SearchViewController: UIViewController {
     
+    // MARK: - Private Properties
+    
+    private let model = Model.getModel()
+    
     private let clearButton = UIButton(type: .system)
     
     private lazy var recentlyViewedLabels = label(text: "Недавно просмотренные", fontSize: 22)
     private lazy var requestOptionsLabel = label(text: "Варианты запросов", fontSize: 22)
     
-    private let productCardOneView = ProductCard(
-        textLabel: """
-Чехол-конверт Incase
-Flat Sleeve для ноутбука
-Apple MacBook Pro 13"
-""",
+    private lazy var productCardOneView = ProductCard(
+        textLabel: model[0].name,
         textSize: 15,
-        imageName: "Case2"
+        imageName: model[0].imageName
     )
-    private let productCardTwoView = ProductCard(
-        textLabel: """
-Спортивный ремешок
-Activ для APPLE Watch 38/40 mm
-""",
+    private lazy var productCardTwoView = ProductCard(
+        textLabel: model[1].name,
         textSize: 15,
-        imageName: "BlackUnity"
+        imageName: model[1].imageName
     )
-    private let productCardThreeView = ProductCard(
-        textLabel: """
-кожаный чехол для MacBook
-Air и MacBook Pro 13
-""",
+    private lazy var productCardThreeView = ProductCard(
+        textLabel: model[2].name,
         textSize: 15,
-        imageName: "LeatherCase"
+        imageName: model[2].imageName
     )
     
     private lazy var firstLineSearchTextField = textField(text: "AirPods", textSize: 22)
@@ -186,6 +180,7 @@ private extension SearchViewController {
         {
             return
         }
+        nextVC.model = model[0]
         navigationController?.pushViewController(nextVC, animated: true)
     }
 }

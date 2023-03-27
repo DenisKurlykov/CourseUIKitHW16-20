@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D25B4D229D193EC0079C08E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D25B4D129D193EC0079C08E /* Model.swift */; };
+		7D25B4D629D1A3290079C08E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D25B4D529D1A3290079C08E /* Assets.xcassets */; };
 		7D3F3FEF29BF657000AE0079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F3FEE29BF657000AE0079 /* AppDelegate.swift */; };
 		7D3F3FF129BF657000AE0079 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F3FF029BF657000AE0079 /* SceneDelegate.swift */; };
 		7D3F3FF329BF657000AE0079 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F3FF229BF657000AE0079 /* TabBarController.swift */; };
@@ -15,7 +17,6 @@
 		7D3F401529BFA01200AE0079 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F401429BFA01200AE0079 /* BuyViewController.swift */; };
 		7D3F401829BFA05800AE0079 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F401729BFA05800AE0079 /* ForYouViewController.swift */; };
 		7D3F404729C2365A00AE0079 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F404629C2365A00AE0079 /* UIViewController+extension.swift */; };
-		7D3F404929C269E600AE0079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F404829C269E600AE0079 /* Assets.xcassets */; };
 		7D3F404B29C6147900AE0079 /* UIView+extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F404A29C6147900AE0079 /* UIView+extenstion.swift */; };
 		7DC19FEA29CE370000DF0648 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC19FE929CE370000DF0648 /* ShoppingCartViewController.swift */; };
 		7DC19FF029CE38FB00DF0648 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC19FEC29CE38FA00DF0648 /* SearchViewController.swift */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D25B4D129D193EC0079C08E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7D25B4D529D1A3290079C08E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D3F3FEB29BF657000AE0079 /* CourseUIKitHW16-20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CourseUIKitHW16-20.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3F3FEE29BF657000AE0079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D3F3FF029BF657000AE0079 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +38,6 @@
 		7D3F401429BFA01200AE0079 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		7D3F401729BFA05800AE0079 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
 		7D3F404629C2365A00AE0079 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
-		7D3F404829C269E600AE0079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		7D3F404A29C6147900AE0079 /* UIView+extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extenstion.swift"; sourceTree = "<group>"; };
 		7DC19FE929CE370000DF0648 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		7DC19FEC29CE38FA00DF0648 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D25B4D029D193D50079C08E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D25B4D129D193EC0079C08E /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7D3F3FE229BF657000AE0079 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		7D3F3FED29BF657000AE0079 /* CourseUIKitHW16-20 */ = {
 			isa = PBXGroup;
 			children = (
+				7D25B4D029D193D50079C08E /* Model */,
 				7D3F400D29BF9E7600AE0079 /* App */,
 				7D3F400E29BF9EA900AE0079 /* Storyboards */,
 				7D3F401029BF9EF300AE0079 /* Resources */,
@@ -118,7 +129,7 @@
 		7D3F401029BF9EF300AE0079 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7D3F404829C269E600AE0079 /* Assets.xcassets */,
+				7D25B4D529D1A3290079C08E /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -225,9 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D3F3FFB29BF657100AE0079 /* LaunchScreen.storyboard in Resources */,
-				7D3F404929C269E600AE0079 /* Assets.xcassets in Resources */,
 				7DC19FF129CE38FB00DF0648 /* SelectedProduct.storyboard in Resources */,
 				7D3F3FF629BF657000AE0079 /* Main.storyboard in Resources */,
+				7D25B4D629D1A3290079C08E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +252,7 @@
 				7D3F3FF329BF657000AE0079 /* TabBarController.swift in Sources */,
 				7D3F401529BFA01200AE0079 /* BuyViewController.swift in Sources */,
 				7D3F404729C2365A00AE0079 /* UIViewController+extension.swift in Sources */,
+				7D25B4D229D193EC0079C08E /* Model.swift in Sources */,
 				7DC19FF229CE38FB00DF0648 /* ProductCard.swift in Sources */,
 				7D3F3FEF29BF657000AE0079 /* AppDelegate.swift in Sources */,
 				7D3F401829BFA05800AE0079 /* ForYouViewController.swift in Sources */,

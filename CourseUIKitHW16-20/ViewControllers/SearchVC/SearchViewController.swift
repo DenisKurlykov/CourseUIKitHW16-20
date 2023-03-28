@@ -174,12 +174,7 @@ private extension SearchViewController {
 private extension SearchViewController {
     @objc func openSelectedVC() {
         let storyboard = UIStoryboard(name: "SelectedProduct", bundle: nil)
-        guard
-            let nextVC = storyboard.instantiateViewController(withIdentifier: "SelectedProductVC") as? SelectedProductViewController
-        else
-        {
-            return
-        }
+        guard let nextVC = storyboard.instantiateViewController(withIdentifier: "SelectedProductVC") as? SelectedProductViewController else { return }
         nextVC.model = model[0]
         navigationController?.pushViewController(nextVC, animated: true)
     }

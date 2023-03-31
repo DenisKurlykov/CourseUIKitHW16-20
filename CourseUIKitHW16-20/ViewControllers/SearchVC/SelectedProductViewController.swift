@@ -18,6 +18,9 @@ final class SelectedProductViewController: UIViewController {
     @IBOutlet private var productColorAluminumLabel: UILabel!
     @IBOutlet private var productColorGrayLabel: UILabel!
     
+    @IBOutlet var selectedProductOneImageView: UIImageView!
+    @IBOutlet var selectedProductTwoImageView: UIImageView!
+    
     // MARK: - Public Properties
     
     var model: Model?
@@ -35,9 +38,16 @@ final class SelectedProductViewController: UIViewController {
         setupUI()
         tapProductColorAluminumLabel()
         tapProductColorGrayLabel()
+        tapSelectedProductOneImageView()
     }
     
     // MARK: - Action
+    
+    private func tapSelectedProductOneImageView() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(choiceAProductOne))
+        selectedProductOneImageView.addGestureRecognizer(tap)
+        selectedProductOneImageView.isUserInteractionEnabled = true
+    }
     
     private func tapProductColorAluminumLabel() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(choiceAluminumColor))
@@ -93,6 +103,13 @@ private extension SelectedProductViewController {
     @objc func choiceGrayColor() {
         productColorAluminumLabel.layer.borderColor = productColorNotSelected.cgColor
         productColorGrayLabel.layer.borderColor = productColorIsSelected.cgColor
+    }
+    
+    @objc func choiceAProductOne() {
+        let vc = AboutSelectedProductViewController()
+        let navVC = UINavigationController(rootViewController: vc)
+        navVC.modalPresentationStyle = .fullScreen
+        present(navVC, animated: true)
     }
 }
 

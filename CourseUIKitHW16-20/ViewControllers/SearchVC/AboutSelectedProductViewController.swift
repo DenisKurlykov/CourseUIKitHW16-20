@@ -12,7 +12,7 @@ final class AboutSelectedProductViewController: UIViewController {
     
     // MARK: - Private properties
     
-    private let url = "https://www.apple.ru"
+    private let url = "https://www.icases.ru/catalog/kompyutery-noutbuki/chekhly-dlya-macbook/chekhly-dlya-macbook-pro-13-touch-bar/chekhol-incase-facet-sleeve-dlya-macbook-air-13-macbook-pro-13-seryy-inmb100680-gry/"
     
     private var currentUrl: String?
     
@@ -81,6 +81,8 @@ private extension AboutSelectedProductViewController {
     }
     
     func setupUI() {
+        view.backgroundColor = .black
+        
         addSubviews(
             webView,
             toolBar,
@@ -91,6 +93,7 @@ private extension AboutSelectedProductViewController {
     func setupNavigationBar() {
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonPressed))
         navigationItem.leftBarButtonItem = doneButton
+        
     }
     
     func setupToolBar() {
@@ -101,6 +104,7 @@ private extension AboutSelectedProductViewController {
         let sharedButton = UIBarButtonItem(title: nil, image: UIImage(systemName: "square.and.arrow.up"), target: self, action: #selector(sharedButtonPressed))
         
         toolBar.items = [backButtonItem, forwardButtonItem, refreshButton, flexibleSpace, sharedButton]
+        
     }
     
     func setupActivityIndicator() {
@@ -148,21 +152,13 @@ extension AboutSelectedProductViewController: WKNavigationDelegate {
         refreshButton.isEnabled = true
         sharedButton.isEnabled = true
         
-        guard webView.canGoBack else { return }
-        backButtonItem.isEnabled = true
+        if webView.canGoForward {
+            forwardButtonItem.isEnabled = true
+        } else if webView.canGoBack {
+            backButtonItem.isEnabled = true
+        }
         
-        guard webView.canGoForward else { return }
-        forwardButtonItem.isEnabled = true
-       // print(webView.url?.absoluteString ?? "") почему не срабатывает данный код ведь страница загрузилась?
-    }
-    
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        let urlStr = navigationAction.request.url?.absoluteString
-            currentUrl = urlStr
-            print(currentUrl ?? "")
-        // если поставить брейк поинт на 157 строку то видно, что метод срабатывает трижды при первых двух данные есть, а на третий раз приходит about blank
-
-        decisionHandler(.allow)
+        currentUrl = webView.url?.absoluteString
     }
 }
 

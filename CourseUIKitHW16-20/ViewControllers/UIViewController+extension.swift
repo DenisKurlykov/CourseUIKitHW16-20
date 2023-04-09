@@ -8,6 +8,28 @@
 import UIKit
 
 extension UIViewController {
+    func alertToSelectAPhotoSource(
+        title: String,
+        completionCamera: @escaping() -> Void,
+        completionGallery: @escaping() -> Void
+    )
+    {
+        let alert = UIAlertController(title: title, message: "", preferredStyle: .actionSheet)
+        let camera = UIAlertAction(title: "Camera", style: .default) { _ in
+            completionCamera()
+        }
+        let gallery = UIAlertAction(title: "Photo Gallery", style: .default) { _ in
+            completionGallery()
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(camera)
+        alert.addAction(gallery)
+        alert.addAction(cancel)
+        
+        present(alert, animated: true)
+    }
+    
     func addSubviews(_ subviews: UIView...) {
         subviews.forEach { subview in
             view.addSubview(subview)

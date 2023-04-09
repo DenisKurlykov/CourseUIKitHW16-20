@@ -35,7 +35,7 @@ final class TabBarController: UITabBarController {
         
         viewControllers = [buyVC, forYouVC, searchNavVC, shoppingCartVC]
         
-        selectedIndex = 2
+        selectedIndex = 1
     }
 }
 

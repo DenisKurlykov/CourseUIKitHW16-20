@@ -40,6 +40,11 @@ final class AboutSelectedProductViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        overrideUserInterfaceStyle = .dark
+        navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
+    }
+    
     // MARK: - Action
     
     @objc private func doneButtonPressed() {
@@ -93,6 +98,7 @@ private extension AboutSelectedProductViewController {
     func setupNavigationBar() {
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonPressed))
         navigationItem.leftBarButtonItem = doneButton
+        navigationController?.navigationBar.barStyle = .black
         
     }
     

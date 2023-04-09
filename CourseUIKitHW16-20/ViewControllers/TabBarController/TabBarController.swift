@@ -11,13 +11,14 @@ final class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        overrideUserInterfaceStyle = .dark
         createTabBar()
     }
 
     private func createTabBar() {
+        let forYouStoryboard = UIStoryboard(name: "ForYou", bundle: nil)
+        
         let buyVC = BuyViewController()
-        let forYouVC = ForYouViewController()
+        let forYouVC = forYouStoryboard.instantiateViewController(identifier: "ForYouVC")
         let searchVC = SearchViewController()
         let shoppingCartVC = ShoppingCartViewController()
         
@@ -29,7 +30,8 @@ final class TabBarController: UITabBarController {
         shoppingCartVC.tabBarItem = UITabBarItem(title: "Корзина", image: UIImage(systemName: "bag"), tag: 3)
         
         tabBar.tintColor = .systemBlue
-        tabBar.backgroundColor = UIColor(red: 18/255.0, green: 18/255.0, blue: 18/255.0, alpha: 1)
+        
+        tabBar.unselectedItemTintColor = .gray
         
         viewControllers = [buyVC, forYouVC, searchNavVC, shoppingCartVC]
         

@@ -11,7 +11,15 @@ final class ForYouViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        overrideUserInterfaceStyle = .dark
-
+        view.backgroundColor = .white
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        overrideUserInterfaceStyle = .light
+        setupTabBar()
+    }
+    
+    private func setupTabBar() {
+        tabBarController?.tabBar.backgroundColor = .white
     }
 }

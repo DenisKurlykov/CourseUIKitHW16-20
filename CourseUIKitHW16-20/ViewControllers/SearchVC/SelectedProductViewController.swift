@@ -41,6 +41,10 @@ final class SelectedProductViewController: UIViewController {
         tapSelectedProductOneImageView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        overrideUserInterfaceStyle = .dark
+    }
+    
     // MARK: - Action
     
     private func tapSelectedProductOneImageView() {

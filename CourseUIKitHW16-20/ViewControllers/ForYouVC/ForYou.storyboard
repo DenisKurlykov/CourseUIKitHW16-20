@@ -200,6 +200,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Для вас" id="ARi-f0-QOP"/>
+                    <connections>
+                        <outlet property="currentDeliveryProductView" destination="wbL-oq-Uwo" id="9VY-wW-WRf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

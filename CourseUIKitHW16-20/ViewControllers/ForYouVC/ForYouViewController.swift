@@ -40,6 +40,12 @@ final class ForYouViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        setupTabBar()
+        setupCurrentDeliveryProductViewShadow()
+        addImageToNavBar()
+        setupPersonPhoto()
+        
+        setupRecognizer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,7 +72,7 @@ final class ForYouViewController: UIViewController {
             title: "Выберите Источник") { [weak self] in
                 guard let self = self else { return }
                 setupPHPicker()
-
+                
             } completionGallery: { [weak self] in
                 guard let self = self else { return }
                 setupPHPicker()
@@ -102,6 +108,16 @@ final class ForYouViewController: UIViewController {
         personPhoto.isUserInteractionEnabled = true
         personPhoto.layer.masksToBounds = true
         personPhoto.contentMode = .scaleAspectFill
+        
+        if UserDefaults.standard.data(forKey: "PHOTO") == nil {
+            personPhoto.image = UIImage(systemName: "person")
+        }else {
+            guard let data = UserDefaults.standard.data(forKey: "PHOTO") else { return }
+            let decoded = try! PropertyListDecoder().decode(Data.self, from: data)
+            let image = UIImage(data: decoded)
+            personPhoto.image = image
+            
+        }
     }
     
     private func setupCurrentDeliveryProductViewShadow() {
@@ -134,6 +150,10 @@ extension ForYouViewController: PHPickerViewControllerDelegate {
         results.forEach { result in
             result.itemProvider.loadObject(ofClass: UIImage.self) { reading, error in
                 guard let image = reading as? UIImage, error == nil else { return }
+                
+                guard let data = image.jpegData(compressionQuality: 0.5) else { return }
+                let encoded = try! PropertyListEncoder().encode(data)
+                UserDefaults.standard.set(encoded, forKey: "PHOTO")
                 
                 DispatchQueue.main.async { [weak self] in
                     guard let self = self else { return }

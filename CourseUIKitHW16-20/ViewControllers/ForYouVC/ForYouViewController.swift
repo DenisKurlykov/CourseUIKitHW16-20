@@ -29,11 +29,11 @@ final class ForYouViewController: UIViewController {
     
     // MARK: - IBOutlet
     
-    @IBOutlet var currentDeliveryProductView: UIView!
+    @IBOutlet private var currentDeliveryProductView: UIView!
     
     // MARK: - Private Properties
     
-    let personPhoto = UIImageView()
+    private let personPhoto = UIImageView()
     
     // MARK: - Override Method
     
@@ -51,11 +51,6 @@ final class ForYouViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         overrideUserInterfaceStyle = .light
         setupTabBar()
-        setupCurrentDeliveryProductViewShadow()
-        addImageToNavBar()
-        setupPersonPhoto()
-        
-        setupRecognizer()
     }
     
     // MARK: - Setup GestureRecognizer
@@ -71,18 +66,17 @@ final class ForYouViewController: UIViewController {
         alertToSelectAPhotoSource(
             title: "Выберите Источник") { [weak self] in
                 guard let self = self else { return }
-                setupPHPicker()
+                getPhotoFromCamera()
                 
             } completionGallery: { [weak self] in
                 guard let self = self else { return }
-                setupPHPicker()
+                getPhotoFromLibrary()
             }
     }
     
     // MARK: - Setup UI
     
     private func setupTabBar() {
-        
         tabBarController?.tabBar.backgroundColor = .white
     }
     
@@ -116,7 +110,6 @@ final class ForYouViewController: UIViewController {
             let decoded = try! PropertyListDecoder().decode(Data.self, from: data)
             let image = UIImage(data: decoded)
             personPhoto.image = image
-            
         }
     }
     
@@ -127,10 +120,9 @@ final class ForYouViewController: UIViewController {
         currentDeliveryProductView.layer.shadowOpacity = 0.5
         currentDeliveryProductView.layer.shadowRadius = 10
         currentDeliveryProductView.layer.shadowOffset = CGSize(width: 0, height: 10)
-        
     }
     
-    private func setupPHPicker() {
+    private func getPhotoFromLibrary() {
         var configuration = PHPickerConfiguration(photoLibrary: .shared())
         configuration.filter = .images
         configuration.selectionLimit = 1
@@ -138,6 +130,14 @@ final class ForYouViewController: UIViewController {
         let picker = PHPickerViewController(configuration: configuration)
         picker.delegate = self
         present(picker, animated: true)
+    }
+    
+    private func getPhotoFromCamera() {
+        let myPickerControllerCamera = UIImagePickerController()
+        myPickerControllerCamera.delegate = self
+        myPickerControllerCamera.sourceType = UIImagePickerController.SourceType.camera
+        myPickerControllerCamera.allowsEditing = true
+        present(myPickerControllerCamera, animated: true)
     }
 }
 
@@ -161,5 +161,16 @@ extension ForYouViewController: PHPickerViewControllerDelegate {
                 }
             }
         }
+    }
+}
+
+// MARK: - UIImagePickerControllerDelegate
+
+extension ForYouViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let photo = info[.originalImage] as? UIImage else { return }
+        personPhoto.image = photo
+        
+        dismiss(animated: true)
     }
 }

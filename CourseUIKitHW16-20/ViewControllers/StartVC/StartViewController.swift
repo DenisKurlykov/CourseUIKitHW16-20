@@ -9,10 +9,10 @@ import UIKit
 
 class StartViewController: UIViewController {
 
-    @IBOutlet var appDownloadScale: UIProgressView!
+    @IBOutlet private var appDownloadScale: UIProgressView!
     
     private var timer = Timer()
-    var counter: Float = 0.0
+    private var counter: Float = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()

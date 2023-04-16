@@ -8,23 +8,6 @@
 import UIKit
 import PhotosUI
 
-private struct Const {
-    /// Image height/width for Large NavBar state
-    static let ImageSizeForLargeState: CGFloat = 40
-    /// Margin from right anchor of safe area to right anchor of Image
-    static let ImageRightMargin: CGFloat = 16
-    /// Margin from bottom anchor of NavBar to bottom anchor of Image for Large NavBar state
-    static let ImageBottomMarginForLargeState: CGFloat = 12
-    /// Margin from bottom anchor of NavBar to bottom anchor of Image for Small NavBar state
-    static let ImageBottomMarginForSmallState: CGFloat = 6
-    /// Image height/width for Small NavBar state
-    static let ImageSizeForSmallState: CGFloat = 32
-    /// Height of NavBar for Small state. Usually it's just 44
-    static let NavBarHeightSmallState: CGFloat = 44
-    /// Height of NavBar for Large state. Usually it's just 96.5 but if you have a custom font for the title, please make sure to edit this value since it changes the height for Large state of NavBar
-    static let NavBarHeightLargeState: CGFloat = 96.5
-}
-
 final class ForYouViewController: UIViewController {
     
     // MARK: - IBOutlet
@@ -84,16 +67,16 @@ final class ForYouViewController: UIViewController {
         // Initial setup for image for Large NavBar state since the the screen always has Large NavBar once it gets opened
         guard let navigationBar = self.navigationController?.navigationBar else { return }
         navigationBar.addSubview(personPhoto)
-        personPhoto.layer.cornerRadius = Const.ImageSizeForLargeState / 2
+        personPhoto.layer.cornerRadius = Const.ImageSizeForLargeState.rawValue / 2
         personPhoto.clipsToBounds = true
         personPhoto.layer.borderWidth = 1
         personPhoto.layer.borderColor = UIColor.gray.cgColor
         personPhoto.contentMode = .scaleAspectFit
         personPhoto.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            personPhoto.rightAnchor.constraint(equalTo: navigationBar.rightAnchor, constant: -Const.ImageRightMargin),
-            personPhoto.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor, constant: -Const.ImageBottomMarginForLargeState),
-            personPhoto.heightAnchor.constraint(equalToConstant: Const.ImageSizeForLargeState),
+            personPhoto.rightAnchor.constraint(equalTo: navigationBar.rightAnchor, constant: -Const.ImageRightMargin.rawValue),
+            personPhoto.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor, constant: -Const.ImageBottomMarginForLargeState.rawValue),
+            personPhoto.heightAnchor.constraint(equalToConstant: Const.ImageSizeForLargeState.rawValue),
             personPhoto.widthAnchor.constraint(equalTo: personPhoto.heightAnchor)
         ])
     }
@@ -105,11 +88,16 @@ final class ForYouViewController: UIViewController {
         
         if UserDefaults.standard.data(forKey: "PHOTO") == nil {
             personPhoto.image = UIImage(systemName: "person")
-        }else {
+        } else {
             guard let data = UserDefaults.standard.data(forKey: "PHOTO") else { return }
-            let decoded = try! PropertyListDecoder().decode(Data.self, from: data)
-            let image = UIImage(data: decoded)
-            personPhoto.image = image
+            do {
+                let decoded = try PropertyListDecoder().decode(Data.self, from: data)
+                let image = UIImage(data: decoded)
+                personPhoto.image = image
+            } catch {
+                return
+            }
+            
         }
     }
     
@@ -152,12 +140,17 @@ extension ForYouViewController: PHPickerViewControllerDelegate {
                 guard let image = reading as? UIImage, error == nil else { return }
                 
                 guard let data = image.jpegData(compressionQuality: 0.5) else { return }
-                let encoded = try! PropertyListEncoder().encode(data)
-                UserDefaults.standard.set(encoded, forKey: "PHOTO")
-                
-                DispatchQueue.main.async { [weak self] in
-                    guard let self = self else { return }
-                    personPhoto.image = image
+                do {
+                    let encoded = try PropertyListEncoder().encode(data)
+                    UserDefaults.standard.set(encoded, forKey: "PHOTO")
+                    
+                    DispatchQueue.main.async { [weak self] in
+                        guard let self = self else { return }
+                        personPhoto.image = image
+                    }
+                    
+                } catch {
+                    return
                 }
             }
         }
@@ -172,5 +165,26 @@ extension ForYouViewController: UIImagePickerControllerDelegate, UINavigationCon
         personPhoto.image = photo
         
         dismiss(animated: true)
+    }
+}
+
+// MARK: - Image size for navigationBar
+
+extension ForYouViewController {
+    enum Const: CGFloat {
+        /// Image height/width for Large NavBar state
+        case ImageSizeForLargeState = 40
+        /// Margin from right anchor of safe area to right anchor of Image
+        case ImageRightMargin = 16
+        /// Margin from bottom anchor of NavBar to bottom anchor of Image for Large NavBar state
+        case ImageBottomMarginForLargeState = 12
+        /// Margin from bottom anchor of NavBar to bottom anchor of Image for Small NavBar state
+        case ImageBottomMarginForSmallState = 6
+        /// Image height/width for Small NavBar state
+        case ImageSizeForSmallState = 32
+        /// Height of NavBar for Small state. Usually it's just 44
+        case NavBarHeightSmallState = 44
+        /// Height of NavBar for Large state. Usually it's just 96.5 but if you have a custom font for the title, please make sure to edit this value since it changes the height for Large state of NavBar
+        case NavBarHeightLargeState = 96.5
     }
 }

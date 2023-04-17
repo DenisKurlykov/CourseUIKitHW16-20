@@ -46,11 +46,20 @@ final class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
         setupNavigationBar()
         setupClearButton()
-        setupUI()
         setupScrollView()
         setupTapGestureRecognizer()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        overrideUserInterfaceStyle = .dark
+        navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
+        
+        setupNavigationBar()
+        
+        tabBarController?.tabBar.backgroundColor = UIColor(red: 18/255.0, green: 18/255.0, blue: 18/255.0, alpha: 1)
     }
     
     // MARK: - Action
@@ -64,7 +73,9 @@ final class SearchViewController: UIViewController {
     
     private func setupNavigationBar() {
         title = "Поиск"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        let navBar = navigationController?.navigationBar
+        navBar?.prefersLargeTitles = true
+        navBar?.barStyle = .black
         
         let searchController = UISearchController()
         navigationItem.searchController = searchController

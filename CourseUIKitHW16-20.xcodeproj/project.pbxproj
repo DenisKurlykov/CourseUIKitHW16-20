@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D2293E129E3417D0086519F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2293E029E3417D0086519F /* StartViewController.swift */; };
 		7D25B4D229D193EC0079C08E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D25B4D129D193EC0079C08E /* Model.swift */; };
 		7D25B4D629D1A3290079C08E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D25B4D529D1A3290079C08E /* Assets.xcassets */; };
 		7D3F3FEF29BF657000AE0079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F3FEE29BF657000AE0079 /* AppDelegate.swift */; };
@@ -24,9 +25,11 @@
 		7DC19FF129CE38FB00DF0648 /* SelectedProduct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DC19FED29CE38FA00DF0648 /* SelectedProduct.storyboard */; };
 		7DC19FF229CE38FB00DF0648 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC19FEE29CE38FA00DF0648 /* ProductCard.swift */; };
 		7DC19FF329CE38FB00DF0648 /* SelectedProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC19FEF29CE38FB00DF0648 /* SelectedProductViewController.swift */; };
+		7DD6BFAA29E27BD500239053 /* ForYou.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD6BFA929E27BD500239053 /* ForYou.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D2293E029E3417D0086519F /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		7D25B4D129D193EC0079C08E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		7D25B4D529D1A3290079C08E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D3F3FEB29BF657000AE0079 /* CourseUIKitHW16-20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CourseUIKitHW16-20.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +49,7 @@
 		7DC19FED29CE38FA00DF0648 /* SelectedProduct.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectedProduct.storyboard; sourceTree = "<group>"; };
 		7DC19FEE29CE38FA00DF0648 /* ProductCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 		7DC19FEF29CE38FB00DF0648 /* SelectedProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedProductViewController.swift; sourceTree = "<group>"; };
+		7DD6BFA929E27BD500239053 /* ForYou.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForYou.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D2293DF29E3411A0086519F /* StartVC */ = {
+			isa = PBXGroup;
+			children = (
+				7D3F3FF429BF657000AE0079 /* Main.storyboard */,
+				7D2293E029E3417D0086519F /* StartViewController.swift */,
+			);
+			path = StartVC;
+			sourceTree = "<group>";
+		};
 		7D25B4D029D193D50079C08E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,8 +99,8 @@
 		7D3F3FED29BF657000AE0079 /* CourseUIKitHW16-20 */ = {
 			isa = PBXGroup;
 			children = (
-				7D25B4D029D193D50079C08E /* Model */,
 				7D3F400D29BF9E7600AE0079 /* App */,
+				7D25B4D029D193D50079C08E /* Model */,
 				7D3F400E29BF9EA900AE0079 /* Storyboards */,
 				7D3F401029BF9EF300AE0079 /* Resources */,
 				7D3F400F29BF9EC000AE0079 /* ViewControllers */,
@@ -108,7 +121,6 @@
 		7D3F400E29BF9EA900AE0079 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				7D3F3FF429BF657000AE0079 /* Main.storyboard */,
 				7D3F3FF929BF657100AE0079 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -119,6 +131,7 @@
 			children = (
 				7D3F404A29C6147900AE0079 /* UIView+extenstion.swift */,
 				7D3F404629C2365A00AE0079 /* UIViewController+extension.swift */,
+				7D2293DF29E3411A0086519F /* StartVC */,
 				7D3F401229BF9F3100AE0079 /* TabBarController */,
 				7D3F401329BF9FEF00AE0079 /* BuyVC */,
 				7D3F401629BFA03200AE0079 /* ForYouVC */,
@@ -156,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				7D3F401729BFA05800AE0079 /* ForYouViewController.swift */,
+				7DD6BFA929E27BD500239053 /* ForYou.storyboard */,
 			);
 			path = ForYouVC;
 			sourceTree = "<group>";
@@ -242,6 +256,7 @@
 				7DC19FF129CE38FB00DF0648 /* SelectedProduct.storyboard in Resources */,
 				7D3F3FF629BF657000AE0079 /* Main.storyboard in Resources */,
 				7D25B4D629D1A3290079C08E /* Assets.xcassets in Resources */,
+				7DD6BFAA29E27BD500239053 /* ForYou.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +271,7 @@
 				7D3F401529BFA01200AE0079 /* BuyViewController.swift in Sources */,
 				7D3F404729C2365A00AE0079 /* UIViewController+extension.swift in Sources */,
 				7D25B4D229D193EC0079C08E /* Model.swift in Sources */,
+				7D2293E129E3417D0086519F /* StartViewController.swift in Sources */,
 				7DC19FF229CE38FB00DF0648 /* ProductCard.swift in Sources */,
 				7D3F3FEF29BF657000AE0079 /* AppDelegate.swift in Sources */,
 				7D3F401829BFA05800AE0079 /* ForYouViewController.swift in Sources */,

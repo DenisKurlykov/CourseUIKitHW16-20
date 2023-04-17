@@ -137,9 +137,11 @@ extension ForYouViewController: PHPickerViewControllerDelegate {
         
         results.forEach { result in
             result.itemProvider.loadObject(ofClass: UIImage.self) { reading, error in
-                guard let image = reading as? UIImage, error == nil else { return }
+                guard let image = reading as? UIImage,
+                      error == nil,
+                      let data = image.jpegData(compressionQuality: 0.5)
+                else { return }
                 
-                guard let data = image.jpegData(compressionQuality: 0.5) else { return }
                 do {
                     let encoded = try PropertyListEncoder().encode(data)
                     UserDefaults.standard.set(encoded, forKey: "PHOTO")

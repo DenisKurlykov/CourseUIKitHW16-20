@@ -35,9 +35,15 @@ class StartViewController: UIViewController {
             appDownloadScale.setProgress(counter, animated: true)
         } else if appDownloadScale.progress == 1.0 {
             timer.invalidate()
-            let vc = TabBarController()
+            
+            let vc = PageViewController()
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true)
+            
+//            let vc = TabBarController()
+//            vc.modalPresentationStyle = .fullScreen
+//            present(vc, animated: true)
         }
     }
 }
+

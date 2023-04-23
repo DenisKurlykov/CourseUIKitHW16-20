@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D2293E129E3417D0086519F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2293E029E3417D0086519F /* StartViewController.swift */; };
-		7D25B4D229D193EC0079C08E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D25B4D129D193EC0079C08E /* Model.swift */; };
+		7D25B4D229D193EC0079C08E /* ModelSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D25B4D129D193EC0079C08E /* ModelSearchVC.swift */; };
 		7D25B4D629D1A3290079C08E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D25B4D529D1A3290079C08E /* Assets.xcassets */; };
 		7D3F3FEF29BF657000AE0079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F3FEE29BF657000AE0079 /* AppDelegate.swift */; };
 		7D3F3FF129BF657000AE0079 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F3FF029BF657000AE0079 /* SceneDelegate.swift */; };
@@ -19,7 +19,10 @@
 		7D3F401829BFA05800AE0079 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F401729BFA05800AE0079 /* ForYouViewController.swift */; };
 		7D3F404729C2365A00AE0079 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F404629C2365A00AE0079 /* UIViewController+extension.swift */; };
 		7D3F404B29C6147900AE0079 /* UIView+extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F404A29C6147900AE0079 /* UIView+extenstion.swift */; };
+		7D3FF8F129F2F08100D41F35 /* ModelOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FF8F029F2F08100D41F35 /* ModelOnboarding.swift */; };
 		7D4C779929D62C490082DB93 /* AboutSelectedProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4C779829D62C490082DB93 /* AboutSelectedProductViewController.swift */; };
+		7D7D147F29ED96FC00C92D7A /* OnboardingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D147E29ED96FC00C92D7A /* OnboardingScreenViewController.swift */; };
+		7D7D148129ED974F00C92D7A /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D148029ED974F00C92D7A /* PageViewController.swift */; };
 		7DC19FEA29CE370000DF0648 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC19FE929CE370000DF0648 /* ShoppingCartViewController.swift */; };
 		7DC19FF029CE38FB00DF0648 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC19FEC29CE38FA00DF0648 /* SearchViewController.swift */; };
 		7DC19FF129CE38FB00DF0648 /* SelectedProduct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DC19FED29CE38FA00DF0648 /* SelectedProduct.storyboard */; };
@@ -30,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		7D2293E029E3417D0086519F /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		7D25B4D129D193EC0079C08E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7D25B4D129D193EC0079C08E /* ModelSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSearchVC.swift; sourceTree = "<group>"; };
 		7D25B4D529D1A3290079C08E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D3F3FEB29BF657000AE0079 /* CourseUIKitHW16-20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CourseUIKitHW16-20.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3F3FEE29BF657000AE0079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +46,10 @@
 		7D3F401729BFA05800AE0079 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
 		7D3F404629C2365A00AE0079 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		7D3F404A29C6147900AE0079 /* UIView+extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extenstion.swift"; sourceTree = "<group>"; };
+		7D3FF8F029F2F08100D41F35 /* ModelOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelOnboarding.swift; sourceTree = "<group>"; };
 		7D4C779829D62C490082DB93 /* AboutSelectedProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSelectedProductViewController.swift; sourceTree = "<group>"; };
+		7D7D147E29ED96FC00C92D7A /* OnboardingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenViewController.swift; sourceTree = "<group>"; };
+		7D7D148029ED974F00C92D7A /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		7DC19FE929CE370000DF0648 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		7DC19FEC29CE38FA00DF0648 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7DC19FED29CE38FA00DF0648 /* SelectedProduct.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectedProduct.storyboard; sourceTree = "<group>"; };
@@ -75,7 +81,7 @@
 		7D25B4D029D193D50079C08E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7D25B4D129D193EC0079C08E /* Model.swift */,
+				7D25B4D129D193EC0079C08E /* ModelSearchVC.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				7D3F400D29BF9E7600AE0079 /* App */,
-				7D25B4D029D193D50079C08E /* Model */,
 				7D3F400E29BF9EA900AE0079 /* Storyboards */,
 				7D3F401029BF9EF300AE0079 /* Resources */,
 				7D3F400F29BF9EC000AE0079 /* ViewControllers */,
@@ -132,6 +137,7 @@
 				7D3F404A29C6147900AE0079 /* UIView+extenstion.swift */,
 				7D3F404629C2365A00AE0079 /* UIViewController+extension.swift */,
 				7D2293DF29E3411A0086519F /* StartVC */,
+				7D7D147D29ED7FB500C92D7A /* OnboardingScreen */,
 				7D3F401229BF9F3100AE0079 /* TabBarController */,
 				7D3F401329BF9FEF00AE0079 /* BuyVC */,
 				7D3F401629BFA03200AE0079 /* ForYouVC */,
@@ -177,6 +183,7 @@
 		7D3F401929BFA09400AE0079 /* SearchVC */ = {
 			isa = PBXGroup;
 			children = (
+				7D25B4D029D193D50079C08E /* Model */,
 				7DC19FEE29CE38FA00DF0648 /* ProductCard.swift */,
 				7DC19FEC29CE38FA00DF0648 /* SearchViewController.swift */,
 				7DC19FED29CE38FA00DF0648 /* SelectedProduct.storyboard */,
@@ -184,6 +191,24 @@
 				7D4C779829D62C490082DB93 /* AboutSelectedProductViewController.swift */,
 			);
 			path = SearchVC;
+			sourceTree = "<group>";
+		};
+		7D3FF8EF29F2F05100D41F35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D3FF8F029F2F08100D41F35 /* ModelOnboarding.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7D7D147D29ED7FB500C92D7A /* OnboardingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7D3FF8EF29F2F05100D41F35 /* Model */,
+				7D7D147E29ED96FC00C92D7A /* OnboardingScreenViewController.swift */,
+				7D7D148029ED974F00C92D7A /* PageViewController.swift */,
+			);
+			path = OnboardingScreen;
 			sourceTree = "<group>";
 		};
 		7DC19FEB29CE371E00DF0648 /* ShoppingCartVC */ = {
@@ -270,17 +295,20 @@
 				7D3F3FF329BF657000AE0079 /* TabBarController.swift in Sources */,
 				7D3F401529BFA01200AE0079 /* BuyViewController.swift in Sources */,
 				7D3F404729C2365A00AE0079 /* UIViewController+extension.swift in Sources */,
-				7D25B4D229D193EC0079C08E /* Model.swift in Sources */,
+				7D25B4D229D193EC0079C08E /* ModelSearchVC.swift in Sources */,
 				7D2293E129E3417D0086519F /* StartViewController.swift in Sources */,
+				7D7D147F29ED96FC00C92D7A /* OnboardingScreenViewController.swift in Sources */,
 				7DC19FF229CE38FB00DF0648 /* ProductCard.swift in Sources */,
 				7D3F3FEF29BF657000AE0079 /* AppDelegate.swift in Sources */,
 				7D3F401829BFA05800AE0079 /* ForYouViewController.swift in Sources */,
 				7DC19FF029CE38FB00DF0648 /* SearchViewController.swift in Sources */,
 				7DC19FF329CE38FB00DF0648 /* SelectedProductViewController.swift in Sources */,
+				7D3FF8F129F2F08100D41F35 /* ModelOnboarding.swift in Sources */,
 				7D3F3FF129BF657000AE0079 /* SceneDelegate.swift in Sources */,
 				7D3F404B29C6147900AE0079 /* UIView+extenstion.swift in Sources */,
 				7DC19FEA29CE370000DF0648 /* ShoppingCartViewController.swift in Sources */,
 				7D4C779929D62C490082DB93 /* AboutSelectedProductViewController.swift in Sources */,
+				7D7D148129ED974F00C92D7A /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

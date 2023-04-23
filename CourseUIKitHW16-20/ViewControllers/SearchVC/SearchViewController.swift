@@ -11,7 +11,7 @@ final class SearchViewController: UIViewController {
     
     // MARK: - Private Properties
     
-    private let model = Model.getModel()
+    private let model = ModelSearchVC.getModel()
     
     private let clearButton = UIButton(type: .system)
     

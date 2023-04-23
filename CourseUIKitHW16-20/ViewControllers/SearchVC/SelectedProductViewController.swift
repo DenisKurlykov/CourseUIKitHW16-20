@@ -23,7 +23,7 @@ final class SelectedProductViewController: UIViewController {
     
     // MARK: - Public Properties
     
-    var model: Model?
+    var model: ModelSearchVC?
     
     //MARK: - Private Properties
     

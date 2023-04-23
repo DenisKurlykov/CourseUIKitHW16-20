@@ -8,14 +8,17 @@
 import UIKit
 
 class StartViewController: UIViewController {
-
+    
     @IBOutlet private var appDownloadScale: UIProgressView!
+    
+    let firstStartApp = UserDefaults.isFirstLaunch()
     
     private var timer = Timer()
     private var counter: Float = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupTimer()
     }
     
@@ -35,9 +38,21 @@ class StartViewController: UIViewController {
             appDownloadScale.setProgress(counter, animated: true)
         } else if appDownloadScale.progress == 1.0 {
             timer.invalidate()
+            
+            
+            if firstStartApp {
+                let vc = PageViewController()
+                vc.modalPresentationStyle = .fullScreen
+                present(vc, animated: true)
+            }
+
+            
             let vc = TabBarController()
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true)
+            
         }
     }
+
 }
+

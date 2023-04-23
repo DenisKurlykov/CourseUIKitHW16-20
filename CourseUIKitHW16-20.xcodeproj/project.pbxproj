@@ -21,6 +21,7 @@
 		7D3F404B29C6147900AE0079 /* UIView+extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F404A29C6147900AE0079 /* UIView+extenstion.swift */; };
 		7D3FF8F129F2F08100D41F35 /* ModelOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FF8F029F2F08100D41F35 /* ModelOnboarding.swift */; };
 		7D4C779929D62C490082DB93 /* AboutSelectedProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4C779829D62C490082DB93 /* AboutSelectedProductViewController.swift */; };
+		7D603C3829F5BC6A00588AC8 /* UserDefaults + isFirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D603C3729F5BC6A00588AC8 /* UserDefaults + isFirstLaunch.swift */; };
 		7D7D147F29ED96FC00C92D7A /* OnboardingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D147E29ED96FC00C92D7A /* OnboardingScreenViewController.swift */; };
 		7D7D148129ED974F00C92D7A /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D148029ED974F00C92D7A /* PageViewController.swift */; };
 		7DC19FEA29CE370000DF0648 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC19FE929CE370000DF0648 /* ShoppingCartViewController.swift */; };
@@ -29,6 +30,7 @@
 		7DC19FF229CE38FB00DF0648 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC19FEE29CE38FA00DF0648 /* ProductCard.swift */; };
 		7DC19FF329CE38FB00DF0648 /* SelectedProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC19FEF29CE38FB00DF0648 /* SelectedProductViewController.swift */; };
 		7DD6BFAA29E27BD500239053 /* ForYou.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD6BFA929E27BD500239053 /* ForYou.storyboard */; };
+		7DE55C3729F5A08500AD726C /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE55C3629F5A08500AD726C /* Storage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,7 @@
 		7D3F404A29C6147900AE0079 /* UIView+extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extenstion.swift"; sourceTree = "<group>"; };
 		7D3FF8F029F2F08100D41F35 /* ModelOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelOnboarding.swift; sourceTree = "<group>"; };
 		7D4C779829D62C490082DB93 /* AboutSelectedProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSelectedProductViewController.swift; sourceTree = "<group>"; };
+		7D603C3729F5BC6A00588AC8 /* UserDefaults + isFirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + isFirstLaunch.swift"; sourceTree = "<group>"; };
 		7D7D147E29ED96FC00C92D7A /* OnboardingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenViewController.swift; sourceTree = "<group>"; };
 		7D7D148029ED974F00C92D7A /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		7DC19FE929CE370000DF0648 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		7DC19FEE29CE38FA00DF0648 /* ProductCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 		7DC19FEF29CE38FB00DF0648 /* SelectedProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedProductViewController.swift; sourceTree = "<group>"; };
 		7DD6BFA929E27BD500239053 /* ForYou.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForYou.storyboard; sourceTree = "<group>"; };
+		7DE55C3629F5A08500AD726C /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				7D3F400D29BF9E7600AE0079 /* App */,
+				7DE55C3529F5A06400AD726C /* Storage */,
 				7D3F400E29BF9EA900AE0079 /* Storyboards */,
 				7D3F401029BF9EF300AE0079 /* Resources */,
 				7D3F400F29BF9EC000AE0079 /* ViewControllers */,
@@ -136,6 +141,7 @@
 			children = (
 				7D3F404A29C6147900AE0079 /* UIView+extenstion.swift */,
 				7D3F404629C2365A00AE0079 /* UIViewController+extension.swift */,
+				7D603C3729F5BC6A00588AC8 /* UserDefaults + isFirstLaunch.swift */,
 				7D2293DF29E3411A0086519F /* StartVC */,
 				7D7D147D29ED7FB500C92D7A /* OnboardingScreen */,
 				7D3F401229BF9F3100AE0079 /* TabBarController */,
@@ -219,6 +225,14 @@
 			path = ShoppingCartVC;
 			sourceTree = "<group>";
 		};
+		7DE55C3529F5A06400AD726C /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				7DE55C3629F5A08500AD726C /* Storage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -297,6 +311,7 @@
 				7D3F404729C2365A00AE0079 /* UIViewController+extension.swift in Sources */,
 				7D25B4D229D193EC0079C08E /* ModelSearchVC.swift in Sources */,
 				7D2293E129E3417D0086519F /* StartViewController.swift in Sources */,
+				7DE55C3729F5A08500AD726C /* Storage.swift in Sources */,
 				7D7D147F29ED96FC00C92D7A /* OnboardingScreenViewController.swift in Sources */,
 				7DC19FF229CE38FB00DF0648 /* ProductCard.swift in Sources */,
 				7D3F3FEF29BF657000AE0079 /* AppDelegate.swift in Sources */,
@@ -308,6 +323,7 @@
 				7D3F404B29C6147900AE0079 /* UIView+extenstion.swift in Sources */,
 				7DC19FEA29CE370000DF0648 /* ShoppingCartViewController.swift in Sources */,
 				7D4C779929D62C490082DB93 /* AboutSelectedProductViewController.swift in Sources */,
+				7D603C3829F5BC6A00588AC8 /* UserDefaults + isFirstLaunch.swift in Sources */,
 				7D7D148129ED974F00C92D7A /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

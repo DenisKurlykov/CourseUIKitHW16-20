@@ -86,7 +86,7 @@ final class ForYouViewController: UIViewController {
         personPhoto.layer.masksToBounds = true
         personPhoto.contentMode = .scaleAspectFill
         
-        if UserDefaults.standard.data(forKey: "PHOTO") == nil {
+        if Storage.shared.getAvatar(forKey: "PHOTO") == nil {
             personPhoto.image = UIImage(systemName: "person")
         } else {
             guard let data = UserDefaults.standard.data(forKey: "PHOTO") else { return }
@@ -139,12 +139,13 @@ extension ForYouViewController: PHPickerViewControllerDelegate {
             result.itemProvider.loadObject(ofClass: UIImage.self) { reading, error in
                 guard let image = reading as? UIImage,
                       error == nil,
-                      let data = image.jpegData(compressionQuality: 0.5)
+                      let data = image.pngData()
                 else { return }
                 
                 do {
                     let encoded = try PropertyListEncoder().encode(data)
-                    UserDefaults.standard.set(encoded, forKey: "PHOTO")
+                    //UserDefaults.standard.set(encoded, forKey: "PHOTO")
+                    Storage.shared.saveAvatar(image: encoded, forKey: "PHOTO")
                     
                     DispatchQueue.main.async { [weak self] in
                         guard let self = self else { return }

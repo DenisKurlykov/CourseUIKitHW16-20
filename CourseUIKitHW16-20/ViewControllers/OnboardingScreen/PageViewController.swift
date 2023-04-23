@@ -63,8 +63,9 @@ final class PageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupVisualComponents()
+        setupUI()
         setupPageController()
+        createTarget()
     }
     
     // MARK: - Init
@@ -82,11 +83,56 @@ final class PageViewController: UIPageViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Private methods
+    // Метод скрывает все компоненты UIPageVC в данном случае единственным элементом являеются точки
+    private func componentsPageVC(isHidden: Bool) {
+        // перебираем все элементы подвида и проверяем являются ли они элементами UIPageControl
+        for subView in view.subviews where subView is UIPageControl {
+            // если да то присваиваем значение переданное в метод
+            subView.isHidden = isHidden
+        }
+    }
+}
+
+// MARK: - Setup action
+private extension PageViewController {
+    func createTarget() {
+        skipButton.addTarget(self, action: #selector(skipButtonPressed), for: .touchUpInside)
+        nextButton.addTarget(self, action: #selector(nextButtonPressed), for: .touchUpInside)
+        startButton.addTarget(self, action: #selector(startButtonPressed), for: .touchUpInside)
+    }
+    
+    @objc func skipButtonPressed() {
+        Storage.shared.saveOnboarding(forKey: "onboarding")
+        let vc = TabBarController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    
+    @objc func nextButtonPressed() {
+        guard let currentVC = viewControllers?.first,
+              let nextVC = dataSource?.pageViewController(self, viewControllerAfter: currentVC) else { return }
+        if nextVC == onboardingScreenViewController.last {
+            nextButton.isHidden = true
+            skipButton.isHidden = true
+            startButton.isHidden = false
+            componentsPageVC(isHidden: true)
+        }
+        setViewControllers([nextVC], direction: .forward, animated: true)
+    }
+    
+    @objc func startButtonPressed() {
+        Storage.shared.saveOnboarding(forKey: "onboarding")
+        let vc = TabBarController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
 }
 
 // MARK: - Setup Visual components
 private extension PageViewController {
-    func setupVisualComponents() {
+    func setupUI() {
         addSubviews(
             skipButton,
             nextButton,
@@ -177,7 +223,7 @@ extension PageViewController: UIPageViewControllerDataSource {
     }
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        0
+        currentIndex
     }
 }
 
@@ -198,10 +244,14 @@ extension PageViewController: UIPageViewControllerDelegate {
             nextButton.isHidden = true
             skipButton.isHidden = true
             startButton.isHidden = false
+            componentsPageVC(isHidden: true)
+
         default:
             nextButton.isHidden = false
             skipButton.isHidden = false
             startButton.isHidden = true
+            componentsPageVC(isHidden: false)
+
         }
     }
 }
